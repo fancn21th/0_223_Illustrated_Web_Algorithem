@@ -1,7 +1,11 @@
-# Vue 3 + Vite
+# Illustrated Web Algorithm
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+Web is unique when it comes to common algorithm. Since it has different programming paradigm like callback, closure and setTimeout.
 
-## Recommended IDE Setup
+When those mixed together the algorithm becomes hard to understand even with a few lines of code.
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar)
+It is the web algorithm that makes new comer scratching head.
+
+So I try to illustrate those web algorithm in visual style.
+
+Enjoy it.
