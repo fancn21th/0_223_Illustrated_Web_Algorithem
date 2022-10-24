@@ -10,8 +10,7 @@ export default {};
 
 <style scoped>
 .frame {
-  width: 100px;
+  width: 50px;
   height: 100px;
-  border: 1px solid black;
 }
 </style>
