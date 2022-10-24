@@ -4,6 +4,7 @@ import HeartSlow from "./components/HeartSlow.vue";
 import Frame from "./components/Frame.vue";
 import { beats } from "./utils/beats";
 import { debounce } from "./utils/debounce";
+import { throttle } from "./utils/throttle";
 
 export default {
   components: {
@@ -29,17 +30,18 @@ export default {
   mounted() {
     let index = 0;
 
-    const debouncedPrint = debounce(this.print);
+    // const debouncedPrint = debounce(this.print, 1000);
+    const throttlePrint = throttle(this.print, 1000);
 
     beats({
       // 每个节拍不管快慢都会执行
       action: ({ rhythmType }) => {
         const currentIndex = rhythmType === "fast" ? index : index++;
         this.frames[currentIndex].type = rhythmType;
-        debouncedPrint(currentIndex);
+        throttlePrint(currentIndex);
         index++;
       },
-      // repeat: 25,
+      repeat: 10,
     });
   },
 };

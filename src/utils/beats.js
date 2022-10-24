@@ -1,7 +1,8 @@
 const fast = 0.5;
 const slow = 1;
 export function beats({
-  rhythm = [fast, fast, fast, fast, slow, slow, slow, slow],
+  // rhythm = [fast, fast, fast, fast, slow, slow, slow, slow],
+  rhythm = [fast, fast, fast, fast],
   action = () => {},
   repeat = 2,
   rhythmTick = 1000,

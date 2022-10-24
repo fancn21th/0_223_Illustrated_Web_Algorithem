@@ -1,5 +1,5 @@
-export function debounce(func, interval = 1000) {
-  let timeout;
+export function debounce(func, interval = 200) {
+  let timer;
   return function () {
     // 保持原函数的 上下文与参数
     const context = this,
@@ -7,14 +7,14 @@ export function debounce(func, interval = 1000) {
 
     // 包装原函数
     const later = function () {
-      timeout = null;
+      timer = null;
       func.apply(context, args);
     };
 
     // 取消定时器
-    clearTimeout(timeout);
+    clearTimeout(timer);
 
     // 延时单位时间执行
-    timeout = setTimeout(later, interval);
+    timer = setTimeout(later, interval);
   };
 }
